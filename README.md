@@ -1,13 +1,19 @@
 # Student Grader
 This is a Python applicaiton for programming lab that calculates students' grades based on assignmet scores and exam results. The project demonstrates Python logic.
 
-
 ## Features
 - Adapter pattern to convert students grades in excel format into a dict.
 - Functions to find average, minimum, and maximum scores.
 - Function to find final grade.
 - Function to find the student's progression.
 - Determine whether a student passes or fails.
+
+## Clean Code Guidelines
+- Please follow the PEP 8 style guide.
+- Lines should not exceed 80 characters.
+- Use meaningful variable and function names.
+- Keep functions small and focused on a single task.
+- Add comments only when necessary: clean code should be self-explanatory.
 
 ## How to Run
 - Please install docker and a engine. See docker website. 
