@@ -3,6 +3,11 @@ This is a Python applicaiton for programming lab that calculates students' grade
 
 
 ## Features
+- Adapter pattern to convert students grades in excel format into a dict.
+- Functions to find average, minimum, and maximum scores.
+- Function to find final grade.
+- Function to find the student's progression.
+- Determine whether a student passes or fails.
 
 ## How to Run
 - Please install docker and a engine. See docker website. 
