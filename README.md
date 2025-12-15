@@ -2,11 +2,29 @@
 This is a Python applicaiton for programming lab that calculates students' grades based on assignmet scores and exam results. The project demonstrates Python logic.
 
 ## Features
-- Adapter pattern to convert students grades in excel format into a dict.
-- Functions to find average, minimum, and maximum scores.
-- Function to find final grade.
-- Function to find the student's progression.
-- Determine whether a student passes or fails.
+
+### Core Grading Feature
+- Functions to calculate min, max, and maximum scores.
+- Final grade calculation based on configurable grading rules.
+- Pass/fail determination.
+- Student progression analysis.
+
+### Services
+- Manuel entry of students and grades though service layer.
+- Import of students and grades from Excel files.
+- Adapter pattern to normalzie external data formats into internal models.
+- Input validation before grade processing.
+
+### Third-party usage simulation
+- Python client interface for third-party developers.
+- High-level methods can be used for various services.
+- Development-time authorization.
+
+### Architecture Design
+- Clear separation between logic, servies, and client layers.
+- Service-priented architecture without requiring a web server.
+- Allows future integration with a web API.
+
 
 ## Clean Code Guidelines
 - Please follow the PEP 8 style guide.
