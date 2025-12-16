@@ -10,18 +10,18 @@ DATABASE_IS_EMPTY = "The database is empty please add students first"
 
 class StudentStatistics:
     def __init__(self):
-        if os.path.getsize(CSV_PATH) == 0 or os.path.exists(CSV_PATH):
+        if not os.path.exists(CSV_PATH) or os.path.getsize(CSV_PATH) == 0:
             raise EmptyDatabaseError(DATABASE_IS_EMPTY)
         else:
             self.df = pd.read_csv(CSV_PATH, index_col="student_id")
     
     def final_score(self, student_id):
-        exam_score = self.df.loc(student_id, "exam_score")
-        non_exam_score = self.df.loc(student_id, "non_exam_score")
+        exam_score = self.df.loc[student_id, "exam_score"]
+        non_exam_score = self.df.loc[student_id, "non_exam_score"]
         return exam_score + non_exam_score
     
     def exam_score(self, student_id):
-        return self.df.loc(student_id, "exam_score")
+        return self.df.loc[student_id, "exam_score"]
     
     def non_exam_score(self, student_id):
         return self.df.loc[student_id, "non_exam_score"]
@@ -30,12 +30,12 @@ class StudentStatistics:
         return self.final_score(student_id) / 2
     
     def score_delta(self, student_id):
-        return self.exam_score(student_id) - self.non_exam_score(student_id)
+        return self.non_exam_score(student_id) - self.exam_score(student_id)
 
 
-class ChortStatistics:
+class CohortStatistics:
     def __init__(self):
-        if os.path.getsize(CSV_PATH) == 0 or os.path.exists(CSV_PATH):
+        if not os.path.exists(CSV_PATH) or os.path.getsize(CSV_PATH) == 0:
             raise EmptyDatabaseError(DATABASE_IS_EMPTY)
         else:
             self.df = pd.read_csv(CSV_PATH, index_col="student_id")
