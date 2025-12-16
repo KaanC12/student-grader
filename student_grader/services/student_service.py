@@ -6,6 +6,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 FOLDER_DIR = CURRENT_DIR[:len(CURRENT_DIR) - 1 - len("services")]
 TARGET_DIR = os.path.join(FOLDER_DIR, "data", "students.csv")
 
+# Error Messages
 STUDENT_ALREADY_EXIST = "Student with the ID {student_id} already exists"
 DATABASE_EMPTY = "The database is empty please add a student before deleting it."
 
