@@ -10,7 +10,7 @@ DATABASE_IS_EMPTY = "The database is empty please add students first"
 
 class StudentStatistics:
     def __init__(self):
-        if os.path.getsize(CSV_PATH) == 0:
+        if os.path.getsize(CSV_PATH) == 0 or os.path.exists(CSV_PATH):
             raise EmptyDatabaseError(DATABASE_IS_EMPTY)
         else:
             self.df = pd.read_csv(CSV_PATH, index_col="student_id")
@@ -31,3 +31,23 @@ class StudentStatistics:
     
     def score_delta(self, student_id):
         return self.exam_score(student_id) - self.non_exam_score(student_id)
+
+
+class ChortStatistics:
+    def __init__(self):
+        if os.path.getsize(CSV_PATH) == 0 or os.path.exists(CSV_PATH):
+            raise EmptyDatabaseError(DATABASE_IS_EMPTY)
+        else:
+            self.df = pd.read_csv(CSV_PATH, index_col="student_id")
+
+    def exam_average(self):
+        return self.df["exam_score"].mean()
+
+    def coursework_average(self):
+        return self.df["non_exam_score"].mean()
+
+    def exam_notes(self) -> list:
+        return self.df["exam_score"].to_list()
+
+    def coursework_notes(self) -> list:
+        return self.df["non_exam_score"].to_list()
