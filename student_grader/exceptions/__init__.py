@@ -1,4 +1,5 @@
 from .exceptions import (
     StudentAlreadyExistsError,
-    EmptyDatabaseError
+    EmptyDatabaseError,
+    ExcelError
 )

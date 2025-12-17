@@ -3,3 +3,6 @@ class StudentAlreadyExistsError(Exception):
 
 class EmptyDatabaseError(Exception):
     """Raised an error when the file is empty."""
+
+class ExcelError(Exception):
+    """Base exception for Excel import errors."""
