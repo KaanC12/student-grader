@@ -14,7 +14,7 @@ def generate_api_key():
     return secrets.token_hex(32)
 
 def save_key(client_name):
-    if not os.path.exists(KEY_PATH) or os.path.getsize() == 0:
+    if not os.path.exists(KEY_PATH) or os.path.getsize(KEY_PATH) == 0:
        key = generate_api_key()
        user = {
            "client_name": client_name,
