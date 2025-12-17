@@ -7,7 +7,6 @@ This is a Python applicaiton for programming lab that calculates students' grade
 - Functions to calculate min, max, and maximum scores.
 - Final grade calculation based on configurable grading rules.
 - Pass/fail determination.
-- Student progression analysis.
 
 ### Services
 - Manuel entry of students and grades though service layer.
@@ -19,6 +18,7 @@ This is a Python applicaiton for programming lab that calculates students' grade
 - Python client interface for third-party developers.
 - High-level methods can be used for various services.
 - Development-time authorization.
+- Student progression analysis.
 
 ### Architecture Design
 - Clear separation between logic, servies, and client layers.
