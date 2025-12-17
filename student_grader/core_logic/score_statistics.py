@@ -31,6 +31,12 @@ class StudentStatistics:
     
     def score_delta(self, student_id):
         return self.non_exam_score(student_id) - self.exam_score(student_id)
+    
+    def is_passing(self, student_id) -> bool:
+        ratio_non_exam_score = self.non_exam_score(student_id) * 40 / 100
+        ratio_exam_score = self.exam_score(student_id) * 60 / 100
+
+        return ratio_non_exam_score + ratio_exam_score >= 40
 
 
 class CohortStatistics:
@@ -51,3 +57,10 @@ class CohortStatistics:
 
     def coursework_notes(self) -> list:
         return self.df["non_exam_score"].to_list()
+    
+    def has_passed(self) -> list:
+        passed_ids = self.df[
+            (self.df["non_exam_score"] * 0.4 + self.df["exam_score"] * 0.6) >= 40
+        ].index.to_list()
+
+        return passed_ids
