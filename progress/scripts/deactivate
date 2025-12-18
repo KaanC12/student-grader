@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# student-grader / deactivation script
+# Usage:
+# deactivate
+
+if [ -z "$STUDENT_GRADER_ACTIVE" ]; then
+    echo "student-grader is not active."
+fi
+
+unset STUDENT_GRADER_ACTIVE
+usnet STUDENT_GRADER_CLIENT
+
+if [ -n "$PS1" ]; then
+    PS1="${PS1#"(student-grader) "}"
+    export PS1
+fi
+
+echo "student-grader deactivated."
