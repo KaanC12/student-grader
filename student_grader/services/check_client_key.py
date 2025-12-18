@@ -43,13 +43,10 @@ def check_key(api_key: str, name: str) -> bool:
     if api_key not in df.index:
         return False
 
-    client_name = df.loc[api_key, "client_name"]
-
-    if client_name != name:
-        return False
+    if df.loc[api_key, "client_name"] != name:
+        raise False
 
     df.loc[api_key, "activate"] = True
-
     df.to_csv(KEY_PATH) 
 
-    return bool(df.loc[api_key, "active"])
+    return True
