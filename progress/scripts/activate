@@ -4,7 +4,7 @@
 # Usage:
 # source scripts/activate <client_name> <api_key>
 
-if ["$#" -ne 2]; then
+if [ "$#" -ne 2 ]; then
     echo "The usage is following: source activate <client_name> <api_key>"
     return 1
 fi
@@ -13,12 +13,12 @@ CLIENT_NAME="$1"
 API_KEY="$2"
 
 python - <<EOF
-from student_grader.services import check_client_key
+from student_grader.services.check_client_key import check_key
 
-check_client_key("$API_KEY", "$CLIENT_NAME")
+check_key("$API_KEY", "$CLIENT_NAME")
 EOF
 
-if [$? -ne 0]; then
+if [ $? -ne 0 ]; then
     echo "Activation failed: invalid or inactive API key or user name."
     return 1
 fi
@@ -26,7 +26,7 @@ fi
 export STUDENT_GRADER_ACTIVE=1
 export STUDENT_GRADER_CLIENT="$CLIENT_NAME"
 
-if [-n "$PS1"]; then
+if [ -n "$PS1" ]; then
     export PS1="(student-grader) $PS1"
 fi
 
