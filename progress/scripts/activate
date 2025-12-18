@@ -13,9 +13,9 @@ CLIENT_NAME="$1"
 API_KEY="$2"
 
 python - <<EOF
-from student_grader.services.check_client_key import check_key
+from progress.auth import check_api_key
 
-check_key("$API_KEY", "$CLIENT_NAME")
+check_api_key("$API_KEY", "$CLIENT_NAME")
 EOF
 
 if [ $? -ne 0 ]; then
