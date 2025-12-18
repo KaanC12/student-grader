@@ -6,3 +6,6 @@ class EmptyDatabaseError(Exception):
 
 class ExcelError(Exception):
     """Base exception for Excel import errors."""
+
+class InvalidStudent(Exception):
+    """Raised when there is not such a student in the database"""
