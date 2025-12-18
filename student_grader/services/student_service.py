@@ -13,7 +13,7 @@ DATABASE_EMPTY = "The database is empty please add a student before deleting it.
 def is_file_empty(path):
     return (not os.path.exists(path)) or os.path.getsize(path) == 0
 
-def add_student(*, student_id, non_exam_score: float, exam_score: float):
+def add_student(student_id, non_exam_score: float, exam_score: float):
     new_student = {
             "student_id": student_id,
             "non_exam_score": non_exam_score,

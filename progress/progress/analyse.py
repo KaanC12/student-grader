@@ -2,16 +2,40 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 from student_grader.core_logic.score_statistics import StudentStatistics, CohortStatistics
+from student_grader.services.student_service import *
 from student_grader.exceptions.exceptions import InvalidStudent
 
 FOLDER_PATH = os.path.dirname(os.path.abspath(__file__))
 STUDENT_PATH = os.path.join(FOLDER_PATH, "..", "..", "student_grader", "data", "students.csv") 
 
 STUDENT_IS_INVALID = "Please enter a valid student from the database."
+STUDENT_VALUES_INVALID = "Pleas generate a valid student."
 
 def is_student_valid(student_id):
     df = pd.read_csv(STUDENT_PATH, index_col="student_id")
     return student_id in df.index
+
+def set_student(*, student: dict):
+    if len(student) != 3:
+        raise ValueError(STUDENT_VALUES_INVALID)
+    
+    student_id = student[0]
+    non_exam_score = student[1]
+    exam_score = student[2] 
+
+    add_student(student_id, non_exam_score, exam_score)
+
+def remove_student(*, student_id):
+    delete_student(student_id)
+
+def change_exam_grade(*, student_id, new_grade):
+    change_exam_score(student_id, new_grade)
+
+def change_coursework_grade(*, student_id, new_grade):
+    change_non_exam_score(student_id, new_grade)
+
+def add_students(*, file_path):
+    import_students_from_excel(file_path)
 
 def analyse_student(*, student_id):
     if not is_student_valid(student_id):
