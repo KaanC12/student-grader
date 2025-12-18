@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# student-grader / progress activation script
+# Usage:
+# source scripts/activate <client_name> <api_key>
+
+if ["$#" -ne 2]; then
+    echo "The usage is following: source activate <client_name> <api_key>"
+    return 1
+fi
+
+CLIENT_NAME="$1"
+API_KEY="$2"
+
+python - <<EOF
+from student_grader.services import check_client_key
+
+check_client_key("$API_KEY", "$CLIENT_NAME")
+EOF
+
+if [$? -ne 0]; then
+    echo "Activation failed: invalid or inactive API key or user name."
+    return 1
+fi
+
+export STUDENT_GRADER_ACTIVE=1
+export STUDENT_GRADER_CLIENT="$CLIENT_NAME"
+
+if [-n "$PS1"]; then
+    export PS1="(student-grader) $PS1"
+fi
+
+echo "student-grader activated for client: $CLIENT_NAME"
