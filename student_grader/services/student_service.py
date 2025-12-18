@@ -80,3 +80,4 @@ def import_students_from_excel(file_path: str):
         df_combined = pd.concat([df_csv, df_excel])
         df_combined = df_combined[~df_combined.index.duplicated(keep="first")] 
         df_combined.to_csv(TARGET_DIR)
+
