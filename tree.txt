@@ -1,0 +1,59 @@
+[drwxr-xr-x kaan      352 Dec 18 20:05]  .
+├── [-rw-r--r-- kaan      187 Nov 28 03:12]  Dockerfile
+├── [-rw-r--r-- kaan     2.6K Dec 17 03:07]  README.md
+├── [-rw-r--r-- kaan     2.7K Dec 18 19:59]  logbook.txt
+├── [drwxr-xr-x kaan      224 Dec 18 19:50]  progress
+│   ├── [drwxr-xr-x kaan      192 Dec 18 19:19]  check
+│   │   ├── [-rw-r--r-- kaan      126 Dec 18 19:18]  __init__.py
+│   │   ├── [drwxr-xr-x kaan      160 Dec 18 19:19]  __pycache__
+│   │   │   ├── [-rw-r--r-- kaan      292 Dec 18 19:19]  __init__.cpython-312.pyc
+│   │   │   ├── [-rw-r--r-- kaan     1.2K Dec 18 19:19]  auth.cpython-312.pyc
+│   │   │   └── [-rw-r--r-- kaan      652 Dec 18 19:11]  check.cpython-312.pyc
+│   │   ├── [-rw-r--r-- kaan      566 Dec 18 19:16]  auth.py
+│   │   └── [-rw-r--r-- kaan      311 Dec 18 19:06]  check.py
+│   ├── [drwxr-xr-x kaan      160 Dec 18 19:15]  progress
+│   │   ├── [-rw-r--r-- kaan      506 Dec 18 19:10]  __init__.py
+│   │   ├── [drwxr-xr-x kaan      160 Dec 18 19:11]  __pycache__
+│   │   │   ├── [-rw-r--r-- kaan      543 Dec 18 19:11]  __init__.cpython-312.pyc
+│   │   │   ├── [-rw-r--r-- kaan     8.4K Dec 18 19:00]  analyse.cpython-312.pyc
+│   │   │   └── [-rw-r--r-- kaan     1.4K Dec 18 19:01]  auth.cpython-312.pyc
+│   │   └── [-rw-r--r-- kaan     5.3K Dec 18 18:49]  analyse.py
+│   ├── [drwxr-xr-x kaan      224 Dec 18 19:50]  progress.egg-info
+│   │   ├── [-rw-r--r-- kaan      256 Dec 18 19:49]  PKG-INFO
+│   │   ├── [-rw-r--r-- kaan      261 Dec 18 19:49]  SOURCES.txt
+│   │   ├── [-rw-r--r-- kaan        1 Dec 18 19:49]  dependency_links.txt
+│   │   ├── [-rw-r--r-- kaan       84 Dec 18 19:49]  requires.txt
+│   │   └── [-rw-r--r-- kaan       23 Dec 18 19:49]  top_level.txt
+│   ├── [-rw-r--r-- kaan      420 Dec 18 19:50]  pyproject.toml
+│   └── [drwxr-xr-x kaan      128 Dec 18 19:20]  scripts
+│       ├── [-rw-r--r-- kaan      692 Dec 18 19:15]  activate
+│       └── [-rw-r--r-- kaan      311 Dec 18 19:20]  deactivate
+├── [drwxr-xr-x kaan      256 Dec 18 18:50]  student_grader
+│   ├── [drwxr-xr-x kaan      160 Dec 18 17:01]  core_logic
+│   │   ├── [-rw-r--r-- kaan       77 Dec 17 02:45]  __init__.py
+│   │   ├── [drwxr-xr-x kaan      128 Dec 18 17:01]  __pycache__
+│   │   │   ├── [-rw-r--r-- kaan      264 Dec 18 06:51]  __init__.cpython-312.pyc
+│   │   │   └── [-rw-r--r-- kaan     5.2K Dec 18 17:01]  score_statistics.cpython-312.pyc
+│   │   └── [-rw-r--r-- kaan     2.4K Dec 18 17:01]  score_statistics.py
+│   ├── [drwxr-xr-x kaan      160 Dec 18 16:12]  data
+│   │   ├── [-rw-r--r-- kaan     1.3K Dec 16 02:48]  README.md
+│   │   ├── [-rw-r--r-- kaan      106 Dec 17 20:43]  clients.csv
+│   │   └── [-rw-r--r-- kaan       77 Dec 18 16:12]  students.csv
+│   ├── [drwxr-xr-x kaan      160 Dec 18 18:50]  exceptions
+│   │   ├── [-rw-r--r-- kaan       98 Dec 16 04:55]  __init__.py
+│   │   ├── [drwxr-xr-x kaan      128 Dec 18 18:50]  __pycache__
+│   │   │   ├── [-rw-r--r-- kaan      289 Dec 17 20:43]  __init__.cpython-312.pyc
+│   │   │   └── [-rw-r--r-- kaan     1.2K Dec 18 18:50]  exceptions.cpython-312.pyc
+│   │   └── [-rw-r--r-- kaan      472 Dec 18 18:44]  exceptions.py
+│   ├── [-rw-r--r-- kaan        0 Nov 28 03:58]  main.py
+│   └── [drwxr-xr-x kaan      224 Dec 18 16:13]  services
+│       ├── [-rw-r--r-- kaan      255 Dec 17 19:36]  __init__.py
+│       ├── [drwxr-xr-x kaan      160 Dec 18 16:13]  __pycache__
+│       │   ├── [-rw-r--r-- kaan      389 Dec 17 20:43]  __init__.cpython-312.pyc
+│       │   ├── [-rw-r--r-- kaan     2.4K Dec 18 06:44]  check_client_key.cpython-312.pyc
+│       │   └── [-rw-r--r-- kaan     4.4K Dec 18 16:12]  student_service.cpython-312.pyc
+│       ├── [-rw-r--r-- kaan     1.3K Dec 18 04:51]  check_client_key.py
+│       └── [-rw-r--r-- kaan     2.8K Dec 18 07:56]  student_service.py
+└── [-rw-r--r-- kaan        0 Dec 18 20:09]  tree.txt
+
+16 directories, 41 files
