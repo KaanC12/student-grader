@@ -9,3 +9,6 @@ class ExcelError(Exception):
 
 class InvalidStudent(Exception):
     """Raised when there is not such a student in the database"""
+
+class ActivationError(RuntimeError):
+    """Raised when shell code not activated."""

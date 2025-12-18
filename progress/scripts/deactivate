@@ -9,7 +9,6 @@ if [ -z "$STUDENT_GRADER_ACTIVE" ]; then
 fi
 
 unset STUDENT_GRADER_ACTIVE
-usnet STUDENT_GRADER_CLIENT
 
 if [ -n "$PS1" ]; then
     PS1="${PS1#"(student-grader) "}"

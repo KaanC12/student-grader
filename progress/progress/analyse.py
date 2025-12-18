@@ -193,3 +193,4 @@ def student_grades():
     plt.tight_layout()
     plt.show()
     
+student_grades()

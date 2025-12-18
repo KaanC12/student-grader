@@ -13,7 +13,7 @@ CLIENT_NAME="$1"
 API_KEY="$2"
 
 python - <<EOF
-from progress.auth import check_api_key
+from progress.check.auth import check_api_key
 
 check_api_key("$API_KEY", "$CLIENT_NAME")
 EOF

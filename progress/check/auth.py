@@ -4,7 +4,6 @@ import pandas as pd
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 KEY_PATH = os.path.join(BASE_PATH, "..", "..", "student_grader", "data", "client.csv")
 
-
 def check_api_key(api_key, name):
     if not os.path.exists(KEY_PATH) or os.path.getsize(KEY_PATH) == 0:
         return False
