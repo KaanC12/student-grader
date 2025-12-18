@@ -1,0 +1,40 @@
+* ef4c647 chor: add pyproject.toml file for distribution.
+* 63d2904 refactor: accomplished project. Set new changes.
+* c0d93f3 feat: accomplished adding new functions for the library.
+* d3435ce feat: add functions to add student(s).
+* 827020a feat: add functions to analyse student.
+* 2ae84ea chor: add library for third-party usage.
+* 9fdef60 feat: add deactivation function for student-grader.
+* e7f4235 refactor: code design was changed a bit. the repo student_grader will be using as a dependency.
+* e68f7aa echo: add authentication for api_key. design was changed.
+* 146d586 feat: update check_key function.
+* 25ab6c5 feat: update shell code. correct typo mistakes.
+* 56a3662 chor: add activate function. It works with following comment: source scripts/activate <client_name> <api_key>.
+* 339965e chor: add library files.
+* e62d095 chor: generate one client to code bash.
+* 9ca7ce6 feat: add new function to check whether the key is valid.
+* 38e70b1 chore: add new file to check client key.
+* 497ee1a doc: update README file. Student progression will be done in the third-paprty usage simulation.
+* 4156e1b refactor: update functions in student service.
+* ebe61b5 feat: add function to determine who passed the test.
+* b82f521 fix: correct statistics services initialization and index access.
+* fe07581 feat: add functions for big data mining. find average exam notes find course work notes get exam notes get course work.
+* a728145 feat: add functions for data mining for students. find total score. get exam score. get non-exam score. get average score. get the difference between exam score and non-exam score.
+* 8f4af2d feat: add index-based student storage and safe insert/delete Store students using as DataFrame index Prevent duplicate student insertion Change notes.
+* a66d8be feat: add a function to import studens from an excel file into the database.
+* ebab28c chore: add dunder init file for services.
+* bdd4678 refactor: move error messages to module-level constants.
+* 2295571 feat: compete dele_student function.
+* b2dfadd refactor: restructure project into proper python package with exceptions and services.
+* 3952f97 chore: Update service name.
+* f171c59 chore: Add a service to add a student to the database.
+* 3069041 docs: add documentation for data directory.
+* 5260ebd docs: Update README file for database.
+* 0de33aa chore: add initial data files for students and clients.
+* e74b04d docs: Update README with new features.
+* c577e9a docs: Update README with clean code GUidelines.
+* 2ea4182 docs: Update README with features.
+* a1a2da2 feat: add main.py
+* 484b8d2 docs: update README with conventional commit description.
+* 60d5b34 build: add Dockerfile.
+* fa003ff docs: create README.md and add basic setup instructions.
