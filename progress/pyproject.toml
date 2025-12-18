@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "progress"
+version = "0.1.0"
+description = "Student progress analysis and visualization tools."
+authors = [
+    { name = "Kağan" }
+]
+
+dependencies = [
+    "student-grader @ git+https://github.com/KaanC12/student-grader.git",
+    "pandas",
+    "matplotlib"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["progress"]

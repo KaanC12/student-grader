@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: progress
+Version: 0.1.0
+Summary: Student progress analysis and visualization tools.
+Author: Kağan
+Requires-Dist: student-grader@ git+https://github.com/KaanC12/student-grader.git
+Requires-Dist: pandas
+Requires-Dist: matplotlib

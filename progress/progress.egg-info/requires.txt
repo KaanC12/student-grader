@@ -1,0 +1,3 @@
+student-grader@ git+https://github.com/KaanC12/student-grader.git
+pandas
+matplotlib
