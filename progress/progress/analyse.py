@@ -115,6 +115,81 @@ def show_grades(*, student_id):
     plt.tight_layout()
     plt.show()
 
-    
+def average_class_grades():
+    stats = CohortStatistics()
 
-show_grades(student_id=123)
+    average_exam_score = stats.exam_average()
+    average_non_exam_score = stats.coursework_average()
+
+    labels = ["Average Exam Grade", "Average Coursework Grade"]
+    scores = [average_exam_score, average_non_exam_score]
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+    
+    axes[0].bar(labels, scores)
+    axes[0].set_title("Average Grades")
+
+    successful_students = len(stats.has_passed())
+    failed_students = len(stats.has_failed())
+
+    labels_student_situation = ["Successful Students", "Failed Students"]
+    values = [successful_students, failed_students]
+
+    axes[1].bar(labels_student_situation, values)
+    axes[1].set_title("Who is successful?")
+
+    plt.tight_layout()
+    plt.show()
+
+def student_grades():
+    stats = CohortStatistics()
+    student_stat = StudentStatistics()
+
+    passed_students = stats.has_passed()
+    failed_students = stats.has_failed()
+
+    passed_notes = []
+    for student in passed_students:
+        passed_notes.append(student_stat.final_score(student))
+
+    failed_notes = []
+    for student in failed_students:
+        failed_notes.append(student_stat.final_score(student))
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+
+    axes[0].plot(
+        passed_students, passed_notes,
+        color="green",
+        marker="o",
+        linewidth=2,
+        linestyle="--",
+        label="Passed Students"
+    )
+
+    axes[0].plot(
+        failed_students, failed_notes,
+        color="red",
+        marker="o",
+        linewidth=2,
+        linestyle="--",
+        label="Failed Students"
+    )
+
+    axes[0].set_title("Student Scores")
+    axes[0].set_xlabel("Students")
+    axes[0].set_ylabel("Notes")
+    axes[0].legend()
+
+    axes[1].bar(
+        ["Passed", "Failed"],
+        [len(passed_students), len(failed_students)],
+        color=["green", "red"]
+    )
+
+    axes[1].set_title("Pass / Fail Count")
+    axes[1].set_ylabel("Number of Students")
+
+    plt.tight_layout()
+    plt.show()
+    

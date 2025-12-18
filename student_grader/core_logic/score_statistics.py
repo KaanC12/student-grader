@@ -16,8 +16,8 @@ class StudentStatistics:
             self.df = pd.read_csv(CSV_PATH, index_col="student_id")
     
     def final_score(self, student_id):
-        exam_score = self.df.loc[student_id, "exam_score"]
-        non_exam_score = self.df.loc[student_id, "non_exam_score"]
+        exam_score = self.df.loc[student_id, "exam_score"] * 0.4
+        non_exam_score = self.df.loc[student_id, "non_exam_score"] * 0.6
         return exam_score + non_exam_score
     
     def exam_score(self, student_id):
@@ -64,3 +64,9 @@ class CohortStatistics:
         ].index.to_list()
 
         return passed_ids
+    def has_failed(self) -> list:
+        failed_ids = self.df[
+            (self.df["non_exam_score"] * 0.4 + self.df["exam_score"] * 0.6) < 40
+        ].index.to_list()
+
+        return failed_ids
